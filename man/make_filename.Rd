@@ -19,5 +19,7 @@ Makde filenames in a format of accident_YY.csv.bz2
 The function may return errors when year cannot be converted to an integer
 }
 \examples{
+library(dplyr)
+library(farc)
 make_filename(2013)
 }
