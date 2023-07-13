@@ -4,10 +4,10 @@
 \alias{fars_summarize_years}
 \title{Summarize number of months appearing in the fars data by year}
 \usage{
-fars_summarize_years(years)
+fars_summarize_years(years = c(2013, 2014, 2015))
 }
 \arguments{
-\item{year}{A string of year numbers}
+\item{years}{A string of year numbers}
 }
 \value{
 A dataframe summarizing number of months appearing in the fars data by year
@@ -18,5 +18,6 @@ Summarize number of months appearing in the fars data by year
 \examples{
 library(dplyr)
 library(tidyr)
+library(farc)
 fars_summarize_years(2013:2014)
 }

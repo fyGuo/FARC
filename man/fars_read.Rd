@@ -2,7 +2,7 @@
 % Please edit documentation in R/fasr.R
 \name{fars_read}
 \alias{fars_read}
-\title{Add together two numbers}
+\title{Read a fars file}
 \usage{
 fars_read(filename)
 }
@@ -13,11 +13,13 @@ fars_read(filename)
 A tibble.
 }
 \description{
-Add together two numbers
+Read a fars file
 }
 \details{
 The function may return errors when the filename cannot be found
 }
 \examples{
-fas_read('fasdata.csv')
+library(farc)
+system.file("extdata", 'accident_2013.csv.bz2' , package = "farc") |> fars_read()
+
 }

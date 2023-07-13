@@ -4,7 +4,7 @@
 \alias{fars_read_years}
 \title{Read in data and make sure years in the data are consistent with their fileanmes}
 \usage{
-fars_read_years(years)
+fars_read_years(years = c(2013, 2014, 2015))
 }
 \arguments{
 \item{years}{A string of year numbers}
@@ -20,5 +20,7 @@ The function may return errors when any of the years cannot be found in the file
 }
 \examples{
 library(dplyr)
+library(farc)
 make_filename(2013:2015)
+
 }

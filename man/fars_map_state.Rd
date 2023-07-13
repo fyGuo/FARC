@@ -4,12 +4,12 @@
 \alias{fars_map_state}
 \title{Plot the map of incidences occuring in the state and the year set by the use}
 \usage{
-fars_map_state(state.num, year)
+fars_map_state(state.num, year = c(2013, 2014, 2015))
 }
 \arguments{
-\item{year}{Year number}
+\item{state.num}{state number}
 
-\item{stat.num}{state number}
+\item{year}{Year number}
 }
 \value{
 A dataframe summarizing number of months appearing in the fars data by year
@@ -24,6 +24,7 @@ Or the stat.num is invalid.
 \examples{
 library(dplyr)
 library(maps)
+library(farc)
 fars_map_state(1, 2013)
-export
+
 }
