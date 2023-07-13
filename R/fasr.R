@@ -16,13 +16,13 @@ fars_read <- function(filename) {
 
 #' Makde filenames in a format of accident_YY.csv.bz2
 #' @param year Year number
-#'
 #' @returns A character "accident_year.csv.bz2" where year is the input
 #' @examples make_filename(year)
 #' @details The function may return errors when year cannot be converted to an integer
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  filename <- paste0("accident_", year, ".csv.bz2")
+  system.file("Data", filename , package = "FARC") |> sprintf()
 }
 
 #' Read in data and make sure years in the data are consistent with their fileanmes
