@@ -20,6 +20,7 @@ The function may return errors when the filename cannot be found
 }
 \examples{
 library(farc)
-system.file("extdata", 'accident_2013.csv.bz2' , package = "farc") |> fars_read()
+library(dplyr)
+system.file("extdata", 'accident_2013.csv.bz2' , package = "farc") \%>\% fars_read()
 
 }
