@@ -6,5 +6,5 @@ Please download and install the package use the code
 
 ```{r}
 library(devtools)
-install_github(fyGuo/FARC)
+install_github("fyGuo/FARC")
 ```
