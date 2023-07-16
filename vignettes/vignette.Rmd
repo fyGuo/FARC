@@ -1,0 +1,32 @@
+---
+title: "vigenette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vigenette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(farc)
+```
+
+## fars_summarize_years 
+This function helps summarize the accident numbers in the FARC dataset by year and month. The arugment is a vector of years set by the user. If users enter years outside of 2013 to 2015, then there be an error.
+
+```{r}
+fars_summarize_years(2013:2015)
+```
+## fars_summarize_years 
+This function shows the accident locations within an State (the `state.num` argument) in year (2013 to 2015). Users need to specify the state number as well as the year. Below, we show the map for state 1 in 2013.
+
+```{r}
+fars_map_state (1, 2013)
+```
